@@ -1,8 +1,21 @@
-<h1>vue-pure-admin</h1>
+<div align="center">
+   <img width="40%" src="src/assets/流光卡片_tempBlackSun_1724476478177.png" alt="dragonos-logo">
+  <h3>
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发&center=true&size=19"><br/>
+  大学生电器开发部考勤计时软件小喵喵二次开发</h3>
+  
+<a href="https://www.hpuedd.com"><img alt="官网" src="https://img.shields.io/badge/官网-hpuedd.com-da282a?link=https://www.hpuedd.com" ></a>
+<a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
+<a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-purple?link=https://pan.hpuedd.top" ></a>
 
+ 
 ![GitHub license](https://img.shields.io/github/license/pure-admin/vue-pure-admin?style=flat)
-![GitHub stars](https://img.shields.io/github/stars/pure-admin/vue-pure-admin?color=fa6470&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/pure-admin/vue-pure-admin?style=flat)
+![GitHub stars](https://img.shields.io/github/stars/HPUhushicheng/xiaomiaomiao?color=fa6470&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/HPUhushicheng/xiaomiaomiao?style=flat)
+![github ss](https://img.shields.io/badge/电器开发部-小喵喵-da282a) 
+--- 
+
+</div>
 
 **中文** | [English](./README.en-US.md)
 
@@ -242,3 +255,7 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 瞧，那些 `小哥哥` 、`小姐姐` 认真 `学习` 的样子真滴是 `哎呦不错哦` :heart:
 
 [![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=pure-admin&repo=vue-pure-admin)](https://github.com/pure-admin/vue-pure-admin/network/members)
+
+```
+  <img src="https://github.com/user-attachments/assets/a89bc684-d737-4174-941d-29a5bfcd005a" alt="Synthwave" height="800" width="500"></br>
+```
