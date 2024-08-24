@@ -1,13 +1,14 @@
 <div align="center">
    <img width="40%" src="src/assets/流光卡片_tempBlackSun_1724476478177.png" alt="dragonos-logo">
   <h3>
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发&center=true&size=19"><br/>
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发;唯有热爱,可抵岁月漫长&center=true&size=19"><br/>
   大学生电器开发部考勤计时软件小喵喵二次开发</h3>
   
 <a href="https://www.hpuedd.com"><img alt="官网" src="https://img.shields.io/badge/官网-hpuedd.com-da282a?link=https://www.hpuedd.com" ></a>
 <a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
 <a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-purple?link=https://pan.hpuedd.top" ></a>
 
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Zhi+Mang+Xing&weight=500&pause=1000&color=ACF782&width=435&lines=%E6%AC%A2%E8%BF%8E%E5%90%84%E4%BD%8D%E7%83%AD%E7%88%B1%E5%BC%80%E5%8F%91%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E5%8A%A0%E5%85%A5!;%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%94%B5%E5%99%A8%E5%BC%80%E5%8F%91%E9%83%A8%E8%80%83%E5%8B%A4%E8%AE%A1%E6%97%B6%E8%BD%AF%E4%BB%B6%E5%B0%8F%E5%96%B5%E5%96%B5%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91" alt="Typing SVG" /></a>
  
 ![GitHub license](https://img.shields.io/github/license/pure-admin/vue-pure-admin?style=flat)
 ![GitHub stars](https://img.shields.io/github/stars/HPUhushicheng/xiaomiaomiao?color=fa6470&style=flat)
@@ -20,10 +21,27 @@
 **中文** | [English](./README.en-US.md)
 
 ## 简介
+`小喵喵`后台管理网站使用`vue-pure-admin`前端模板 + `nodejs` + `mysql`开发, 桌面端软件使用`electron`技术开发,计划暂时支持`windows10,windows11`版本以及`macOS`部分系列,`linux`不加入计划中;
 
 `vue-pure-admin` 是一款开源免费且开箱即用的中后台管理系统模版。完全采用 `ECMAScript` 模块（`ESM`）规范来编写和组织代码，使用了最新的 `Vue3`、
-`Vite`、`Element-Plus`、`TypeScript`、`Pinia`、`Tailwindcss` 等主流技术开发
+`Vite`、`Element-Plus`、`TypeScript`、`Pinia`、`Tailwindcss` 等主流技术开发;
 
+开源地址: [https://github.com/pure-admin/vue-pure-admin](https://github.com/pure-admin/vue-pure-admin)
+
+文档介绍: [https://pure-admin.github.io/](https://pure-admin.github.io/)
+
+
+## 参与开发？
+
+仔细阅读 [vue-pure-admin介绍文档] ，能够帮助你了解网站前端的运作方式，以及如何参与开发！
+
+- **了解开发动态、开发任务，请访问DragonOS社区论坛**： [https://bbs.dragonos.org.cn](https://bbs.dragonos.org.cn)
+- 您也可以从项目的issue里面了解相关的开发内容。
+
+
+&emsp;&emsp;如果你愿意加入我们，你可以查看issue，并在issue下发表讨论、想法，或者访问DragonOS的论坛，了解开发动态、开发任务： [https://bbs.dragonos.org.cn](https://bbs.dragonos.org.cn)
+
+&emsp;&emsp;你也可以带着你的创意与想法，和社区的小伙伴一起讨论，为DragonOS创造一些新的功能。
 ## 研发理念
 
 稳定中求创新，技术中见未来
