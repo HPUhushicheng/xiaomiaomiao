@@ -261,7 +261,7 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 
 瞧，那些 `小哥哥` 、`小姐姐` 认真 `学习` 的样子真滴是 `哎呦不错哦` :heart:
 
-[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/pure-admin/vue-pure-admin/network/members)
+[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/network/members)
 
 ```
   <img src="https://github.com/user-attachments/assets/a89bc684-d737-4174-941d-29a5bfcd005a" alt="Synthwave" height="800" width="500"></br>
