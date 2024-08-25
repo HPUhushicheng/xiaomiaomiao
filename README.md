@@ -35,13 +35,12 @@
 
 仔细阅读 [vue-pure-admin介绍文档] ，能够帮助你了解网站前端的运作方式，以及如何参与开发！
 
-- **了解开发动态、开发任务，请访问DragonOS社区论坛**： [https://bbs.dragonos.org.cn](https://bbs.dragonos.org.cn)
-- 您也可以从项目的issue里面了解相关的开发内容。
+- **了解开发动态、开发任务，请访问`电器开发部blog`**： [https://code.comefly.top](https://code.comefly.top)
+- 您也可以从项目的discussions里面了解相关的开发内容。
 
 
-&emsp;&emsp;如果你愿意加入我们，你可以查看issue，并在issue下发表讨论、想法，或者访问DragonOS的论坛，了解开发动态、开发任务： [https://bbs.dragonos.org.cn](https://bbs.dragonos.org.cn)
-
-&emsp;&emsp;你也可以带着你的创意与想法，和社区的小伙伴一起讨论，为DragonOS创造一些新的功能。
+&emsp;&emsp;如果你愿意加入我们，你可以查看discussions，并发表讨论、想法.
+&emsp;&emsp;你也可以带着你的创意与想法，和社区的小伙伴一起讨论，为`小喵喵`创造一些新的功能。
 ## 研发理念
 
 稳定中求创新，技术中见未来
