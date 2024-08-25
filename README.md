@@ -8,7 +8,7 @@
 <a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
 <a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-purple?link=https://pan.hpuedd.top" ></a>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Zhi+Mang+Xing&weight=500&pause=1000&color=ACF782&width=435&lines=%E6%AC%A2%E8%BF%8E%E5%90%84%E4%BD%8D%E7%83%AD%E7%88%B1%E5%BC%80%E5%8F%91%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E5%8A%A0%E5%85%A5!;%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%94%B5%E5%99%A8%E5%BC%80%E5%8F%91%E9%83%A8%E8%80%83%E5%8B%A4%E8%AE%A1%E6%97%B6%E8%BD%AF%E4%BB%B6%E5%B0%8F%E5%96%B5%E5%96%B5%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91" alt="Typing SVG" /></a>
+
  
 ![GitHub license](https://img.shields.io/github/license/pure-admin/vue-pure-admin?style=flat)
 ![GitHub stars](https://img.shields.io/github/stars/HPUhushicheng/xiaomiaomiao?color=fa6470&style=flat)
