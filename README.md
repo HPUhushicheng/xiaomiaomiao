@@ -243,7 +243,7 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 
 ## 维护者
 
-[xiaoxian521](https://github.com/xiaoxian521)、[Ten-K](https://github.com/Ten-K)
+[HPUhushicheng](https://github.com/HPUhushicheng)
 
 ## 许可证
 
@@ -255,14 +255,11 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 
 非常感谢留下星星的好心人，感谢您的支持 :heart:
 
-[![Stargazers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/stargazersSVG.php?user=pure-admin&repo=vue-pure-admin)](https://github.com/pure-admin/vue-pure-admin/stargazers)
+[![Stargazers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/stargazersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/stargazers)
 
 ## `Fork`
 
 瞧，那些 `小哥哥` 、`小姐姐` 认真 `学习` 的样子真滴是 `哎呦不错哦` :heart:
 
-[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=xiaomiaomiao&repo=xiaomiaomiao)](https://github.com/xiaomiaomiao/xiaomiaomiao/network/members)
+[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/network/members)
 
-```
-  <img src="https://github.com/user-attachments/assets/a89bc684-d737-4174-941d-29a5bfcd005a" alt="Synthwave" height="800" width="500"></br>
-```
