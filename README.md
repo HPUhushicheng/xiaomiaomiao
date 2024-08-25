@@ -4,7 +4,7 @@
   <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发;唯有热爱,可抵岁月漫长&center=true&size=19"><br/>
   大学生电器开发部考勤计时软件小喵喵二次开发</h3>
   
-<a href="https://www.hpuedd.com"><img alt="官网" src="https://img.shields.io/badge/官网-hpuedd.com-da282a?link=https://www.hpuedd.com" ></a>
+<a href="https://www.hpuedd.com"><img alt="官网" src="https://img.shields.io/badge/官网-hpuedd.com-da282a?link=http://www.hpuedd.com" ></a>
 <a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/电器开发部blog-code.comefly.top-blue?link=https://code.comefly.top" ></a>
 <a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/老博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
 <a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-green?link=https://pan.hpuedd.top" ></a>
