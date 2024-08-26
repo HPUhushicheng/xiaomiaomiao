@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="40%" src="src/assets/流光卡片_tempBlackSun_1724476478177.png" alt="dragonos-logo">
+   <img width="40%" src="src/assets/zhanshi.png" alt="dragonos-logo">
   <h3>
   <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发;唯有热爱,可抵岁月漫长&center=true&size=19"><br/>
   大学生电器开发部考勤计时软件小喵喵二次开发</h3>
