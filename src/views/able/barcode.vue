@@ -25,6 +25,62 @@ const barcodes = [
       background: "#eee",
       width: 5
     }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
+  },
+  {
+    text: "123456",
+    type: "pharmacode",
+    options: {
+      background: "#eee",
+      width: 5
+    }
   }
 ];
 </script>

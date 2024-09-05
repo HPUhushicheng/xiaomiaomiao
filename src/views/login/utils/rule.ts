@@ -1,3 +1,4 @@
+/** 校验部分，代码只进行了格式的校验，没进行数据的校验，没有从后端获取数据进行校验 */
 import { reactive } from "vue";
 import { isPhone } from "@pureadmin/utils";
 import type { FormRules } from "element-plus";

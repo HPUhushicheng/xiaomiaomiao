@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, reactive } from "vue";
+import { ElMessage } from "element-plus";
 import { TypeIt, type TypeItOptions } from "@/components/ReTypeit";
 
 defineOptions({
@@ -6,7 +8,68 @@ defineOptions({
 });
 
 const options: TypeItOptions = {
-  strings: ["test1", "test2", "test3"]
+  strings: ["欢迎来到大学生电器开发部！大家好嗨", "test2", "test3"]
+};
+const posX = 960;
+const posY = 100;
+
+const formJson = reactive({
+  widgetList: [
+    {
+      key: 97015,
+      type: "card",
+      category: "container",
+      icon: "card",
+      widgetList: [],
+      options: {
+        name: "card93075",
+        label: "card93075",
+        hidden: false,
+        headerHidden: false,
+        folded: false,
+        showFold: true,
+        cardWidth: "30%",
+        shadow: "never",
+        customClass: []
+      },
+      id: "card93075"
+    }
+  ],
+  formConfig: {
+    modelName: "formData",
+    refName: "vForm",
+    rulesName: "rules",
+    labelWidth: 80,
+    labelPosition: "left",
+    size: "",
+    labelAlign: "label-left-align",
+    cssCode: "",
+    customClass: [],
+    functions: "",
+    layoutType: "PC",
+    jsonVersion: 3,
+    dataSources: [],
+    onFormCreated: "",
+    onFormMounted: "",
+    onFormDataChange: "",
+    onFormValidate: ""
+  }
+});
+const formData = reactive({});
+const optionData = reactive({});
+const vFormRef = ref(null);
+
+const submitForm = () => {
+  vFormRef.value
+    .getFormData()
+    .then(formData => {
+      // Form Validation OK
+      alert(JSON.stringify(formData));
+    })
+    .catch(error => {
+      // Form Validation failed
+      ElMessage.error(error);
+    });
 };
 </script>
 
@@ -23,7 +86,33 @@ const options: TypeItOptions = {
           代码位置 src/views/able/typeit.vue
         </el-link>
       </div>
+
+      <div class="center-container">
+        <div class="centered-content"><TypeIt :options="options" /></div>
+      </div>
+
+      <div
+        :style="{ position: 'absolute', left: posX + 'px', top: posY + 'px' }"
+      >
+        Hello World!
+      </div>
+
+      <div>
+        <el-button type="primary" @click="submitForm">Submit</el-button>
+      </div>
     </template>
-    <TypeIt :options="options" />
   </el-card>
 </template>
+
+<style scoped>
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500%; /* 或者指定一个具体的高度 */
+}
+
+.centered-content {
+  /* 这里可以添加更多的样式 */
+}
+</style>

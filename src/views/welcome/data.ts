@@ -9,16 +9,6 @@ const days = ["周日", "周一", "周二", "周三", "周四", "周五", "周�
 /** 需求人数、提问数量、解决数量、用户满意度 */
 const chartData = [
   {
-    icon: GroupLine,
-    bgColor: "#effaff",
-    color: "#41b6ff",
-    duration: 2200,
-    name: "需求人数",
-    value: 36000,
-    percent: "+88%",
-    data: [2101, 5288, 4239, 4962, 6752, 5208, 7450] // 平滑折线图数据
-  },
-  {
     icon: Question,
     bgColor: "#fff5f4",
     color: "#e85f33",
@@ -27,6 +17,16 @@ const chartData = [
     value: 16580,
     percent: "+70%",
     data: [2216, 1148, 1255, 788, 4821, 1973, 4379]
+  },
+  {
+    icon: GroupLine,
+    bgColor: "#effaff",
+    color: "#41b6ff",
+    duration: 2200,
+    name: "山山水水",
+    value: 36000,
+    percent: "+88%",
+    data: [2101, 5288, 4239, 4962, 6752, 5208, 2120] // 平滑折线图数据
   },
   {
     icon: CheckLine,

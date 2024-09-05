@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { useRouter } from "vue-router";
 import noAccess from "@/assets/status/403.svg?component";
 
@@ -67,4 +67,22 @@ const router = useRouter();
       </el-button>
     </div>
   </div>
+</template> -->
+
+<template>
+  <div>
+    <AttendanceTimer />
+  </div>
 </template>
+
+<script setup lang="ts">
+import AttendanceTimer from "@/components/AttendanceTimer.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+defineOptions({
+  name: "403",
+  components: {
+    AttendanceTimer
+  }
+});
+</script>

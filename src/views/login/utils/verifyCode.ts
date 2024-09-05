@@ -1,3 +1,4 @@
+/** useVerifyCode 函数用于处理验证码相关的启动和结束验证码的计时器,不参与校验 */
 import type { FormInstance, FormItemProp } from "element-plus";
 import { clone } from "@pureadmin/utils";
 import { ref } from "vue";

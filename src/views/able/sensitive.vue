@@ -31,6 +31,7 @@ function onInput() {
         </el-link>
       </div>
     </template>
+
     <div class="flex flex-wrap gap-2 my-2">
       <span>自定义敏感词</span>
       <el-tag
