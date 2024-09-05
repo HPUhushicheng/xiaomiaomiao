@@ -1,40 +1,65 @@
-<h1>vue-pure-admin</h1>
+<div align="center">
+   <img width="40%" src="src/assets/zhanshi.png" alt="dragonos-logo">
+  <h3>
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=欢迎各位热爱开发的小伙伴加入!;大学生电器开发部考勤计时软件小喵喵二次开发;唯有热爱,可抵岁月漫长&center=true&size=19"><br/>
+  大学生电器开发部考勤计时软件小喵喵二次开发</h3>
+  
+<a href="https://www.hpuedd.com"><img alt="官网" src="https://img.shields.io/badge/官网-hpuedd.com-da282a?link=http://www.hpuedd.com" ></a>
+<a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/电器开发部blog-code.comefly.top-blue?link=https://code.comefly.top" ></a>
+<a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/老博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
+<a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-green?link=https://pan.hpuedd.top" ></a>
 
+
+ 
 ![GitHub license](https://img.shields.io/github/license/pure-admin/vue-pure-admin?style=flat)
-![GitHub stars](https://img.shields.io/github/stars/pure-admin/vue-pure-admin?color=fa6470&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/pure-admin/vue-pure-admin?style=flat)
+![GitHub stars](https://img.shields.io/github/stars/HPUhushicheng/xiaomiaomiao?color=fa6470&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/HPUhushicheng/xiaomiaomiao?style=flat)
+![github ss](https://img.shields.io/badge/电器开发部-小喵喵-da282a) 
+--- 
+
+</div>
 
 **中文** | [English](./README.en-US.md)
 
 ## 简介
+`小喵喵`后台管理网站使用`vue-pure-admin`前端模板 + `nodejs` + `mysql`开发, 桌面端软件使用`electron`技术开发,计划暂时支持`windows10,windows11`版本以及`macOS`部分系列,`linux`不加入计划中;
 
 `vue-pure-admin` 是一款开源免费且开箱即用的中后台管理系统模版。完全采用 `ECMAScript` 模块（`ESM`）规范来编写和组织代码，使用了最新的 `Vue3`、
-`Vite`、`Element-Plus`、`TypeScript`、`Pinia`、`Tailwindcss` 等主流技术开发
+`Vite`、`Element-Plus`、`TypeScript`、`Pinia`、`Tailwindcss` 等主流技术开发;
 
+开源地址: [https://github.com/pure-admin/vue-pure-admin](https://github.com/pure-admin/vue-pure-admin)
+
+文档介绍: [https://pure-admin.github.io/](https://pure-admin.github.io/)
+
+
+## 参与开发？
+
+仔细阅读 [vue-pure-admin介绍文档] ，能够帮助你了解网站前端的运作方式，以及如何参与开发！
+
+- 了解开发动态、开发任务，请访问`电器开发部blog`： [https://code.comefly.top](https://code.comefly.top)
+- 您也可以从项目的discussions里面了解相关的开发内容。
+- 如果你愿意加入我们，你可以查看discussions，并发表讨论、想法.
+- 你也可以带着你的创意与想法，和社区的小伙伴一起讨论，为`小喵喵`创造一些新的功能。
 ## 研发理念
 
 稳定中求创新，技术中见未来
 
-## 精简版本（实际项目开发请用精简版本，提供 `非国际化` 、`国际化` 两个版本选择）
+## 精简版本，我们不用这个，用完整版
 
 精简版本是基于 [vue-pure-admin](https://github.com/pure-admin/vue-pure-admin) 提炼出的架子，包含主体功能，更适合实际项目开发，打包后的大小在全局引入 [element-plus](https://element-plus.org) 的情况下仍然低于 `2.3MB`，并且会永久同步完整版的代码。开启 `brotli` 压缩和 `cdn` 替换本地库模式后，打包大小低于 `350kb`
 
 [点我查看非国际化精简版本](https://github.com/pure-admin/pure-admin-thin)  
 [点我查看国际化精简版本](https://github.com/pure-admin/pure-admin-thin/tree/i18n)
 
-## 配套视频
+## 原作者的配套视频
 
 [点我查看 UI 设计](https://www.bilibili.com/video/BV17g411T7rq)  
 [点我查看快速开发教程](https://www.bilibili.com/video/BV1kg411v7QT)
 
-## 配套保姆级文档
+## 原作者的配套保姆级文档
 
 [点我查看 vue-pure-admin 文档](https://pure-admin.github.io/pure-admin-doc)  
 [点我查看 @pureadmin/utils 文档](https://pure-admin-utils.netlify.app)
-
-## 优质服务、软件外包、赞助支持
-
-[点我查看详情](https://pure-admin.github.io/pure-admin-doc/pages/service/)
 
 ## `js` 版本
 
@@ -48,7 +73,7 @@
 
 [点我查看 Tauri 版本](https://github.com/pure-admin/tauri-pure-admin)
 
-## `Electron` 版本
+## `Electron` 版本，我们用这个
 
 [点我查看 Electron 版本](https://github.com/pure-admin/electron-pure-admin)
 
@@ -186,12 +211,7 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 |       [hb0730](https://github.com/hb0730)       |    [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=hb0730)    |
 |         [o-cc](https://github.com/o-cc)         |     [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=o-cc)     |
 | [yj-liuzepeng](https://github.com/yj-liuzepeng) | [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=yj-liuzepeng) |
-|   [skyline523](https://github.com/skyline523)   |  [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=skyline523)  |
-| [shark-lajiao](https://github.com/shark-lajiao) | [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=shark-lajiao) |
-|      [WitMiao](https://github.com/WitMiao)      |   [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=WitMiao)    |
-|     [QFifteen](https://github.com/QFifteen)     |   [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=QFifteen)   |
-|      [edgexie](https://github.com/edgexie)      |   [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=edgexie)    |
-|       [way-jm](https://github.com/way-jm)       |    [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=way-jm)    |
+
 
 ## `Git` 贡献提交规范
 
@@ -223,22 +243,18 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 
 ## 维护者
 
-[xiaoxian521](https://github.com/xiaoxian521)、[Ten-K](https://github.com/Ten-K)
+[HPUhushicheng](https://github.com/HPUhushicheng)
 
-## 许可证
-
-完全免费开源
-
-[MIT © 2020-present, pure-admin](./LICENSE)
 
 ## `Star`
 
 非常感谢留下星星的好心人，感谢您的支持 :heart:
 
-[![Stargazers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/stargazersSVG.php?user=pure-admin&repo=vue-pure-admin)](https://github.com/pure-admin/vue-pure-admin/stargazers)
+[![Stargazers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/stargazersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/stargazers)
 
 ## `Fork`
 
 瞧，那些 `小哥哥` 、`小姐姐` 认真 `学习` 的样子真滴是 `哎呦不错哦` :heart:
 
-[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=pure-admin&repo=vue-pure-admin)](https://github.com/pure-admin/vue-pure-admin/network/members)
+[![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/network/members)
+
