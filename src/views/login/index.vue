@@ -24,6 +24,7 @@ import { ref, toRaw, reactive, watch, computed } from "vue";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import { useTranslationLang } from "@/layout/hooks/useTranslationLang";
 import { useDataThemeChange } from "@/layout/hooks/useDataThemeChange";
+import axios from 'axios'; // 引入 axios
 
 import dayIcon from "@/assets/svg/day.svg?component";
 import darkIcon from "@/assets/svg/dark.svg?component";
@@ -33,10 +34,12 @@ import Check from "@iconify-icons/ep/check";
 import User from "@iconify-icons/ri/user-3-fill";
 import Info from "@iconify-icons/ri/information-line";
 
+// 组件名称
 defineOptions({
   name: "Login"
 });
 
+// 反应式数据
 const imgCode = ref("");
 const loginDay = ref(7);
 const router = useRouter();
@@ -48,6 +51,7 @@ const currentPage = computed(() => {
   return useUserStoreHook().currentPage;
 });
 
+// 国际化支持
 const { t } = useI18n();
 const { initStorage } = useLayout();
 initStorage();
@@ -56,46 +60,65 @@ dataThemeChange(overallStyle.value);
 const { title, getDropdownItemStyle, getDropdownItemClass } = useNav();
 const { locale, translationCh, translationEn } = useTranslationLang();
 
+// 登录表单数据
 const ruleForm = reactive({
-  username: "admin",
-  password: "admin123",
+  username: "",
+  password: "",
   verifyCode: ""
 });
 
+// 登录处理方法
 const onLogin = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
-  await formEl.validate(valid => {
+
+  await formEl.validate(async (valid) => {
     if (valid) {
       loading.value = true;
-      useUserStoreHook()
-        .loginByUsername({ username: ruleForm.username, password: "admin123" })
-        .then(res => {
-          if (res.success) {
-            // 获取后端路由
-            return initRouter().then(() => {
-              disabled.value = true;
-              router
-                .push(getTopMenu(true).path)
-                .then(() => {
-                  message(t("login.pureLoginSuccess"), { type: "success" });
-                })
-                .finally(() => (disabled.value = false));
-            });
-          } else {
-            message(t("login.pureLoginFail"), { type: "error" });
-          }
-        })
-        .finally(() => (loading.value = false));
+
+      try {
+        // 获取用户列表
+        const userResponse = await axios.get('http://localhost:666/list/all');
+        const users = userResponse.data;
+
+        // 查找匹配的用户
+        const user = users.find(u => u.name === ruleForm.username && u.password === ruleForm.password);
+
+        if (user) {
+          message(t("login.pureLoginSuccess"), { type: "success" });
+
+          // 使用状态管理的登录方法
+          await useUserStoreHook().loginByUsername({ username: ruleForm.username, password: ruleForm.password });
+
+          // 初始化路由
+          await initRouter();
+          disabled.value = true;
+
+          // 路由跳转
+          await router.push(getTopMenu(true).path);
+          message(t("login.pureLoginSuccess"), { type: "success" });
+        } else {
+          // 登录失败处理
+          message(t("login.pureLoginFail"), { type: "error" });
+        }
+      } catch (error) {
+        console.error("Error fetching user data or processing login", error);
+        message(t("login.pureLoginFail"), { type: "error" });
+      } finally {
+        loading.value = false;
+        disabled.value = false;
+      }
     }
   });
 };
 
+// 防抖处理
 const immediateDebounce: any = debounce(
   formRef => onLogin(formRef),
   1000,
   true
 );
 
+// 事件监听
 useEventListener(document, "keypress", ({ code }) => {
   if (
     ["Enter", "NumpadEnter"].includes(code) &&
@@ -105,6 +128,7 @@ useEventListener(document, "keypress", ({ code }) => {
     immediateDebounce(ruleFormRef.value);
 });
 
+// 监听其他字段变化
 watch(imgCode, value => {
   useUserStoreHook().SET_VERIFYCODE(value);
 });
@@ -171,7 +195,7 @@ watch(loginDay, value => {
           <Motion>
             <h2 class="outline-none">
               <TypeIt
-                :options="{ strings: [title], cursor: false, speed: 100 }"
+                :options="{ strings:  [title], cursor: false, speed: 100 }"
               />
             </h2>
           </Motion>
@@ -220,7 +244,7 @@ watch(loginDay, value => {
                 <el-input
                   v-model="ruleForm.verifyCode"
                   clearable
-                  :placeholder="t('login.pureVerifyCode')"
+                  :placeholder="t('验证码')"
                   :prefix-icon="useRenderIcon('ri:shield-keyhole-line')"
                 >
                   <template v-slot:append>
@@ -333,13 +357,13 @@ watch(loginDay, value => {
     <div
       class="w-full flex-c absolute bottom-3 text-sm text-[rgba(0,0,0,0.6)] dark:text-[rgba(220,220,242,0.8)]"
     >
-      Copyright © 2020-present
+      Copyright © 2024-present
       <a
         class="hover:text-primary"
-        href="https://github.com/pure-admin"
+        href="https://github.com/HPUhushicheng/xiaomiaomiao"
         target="_blank"
       >
-        &nbsp;{{ title }}
+        &nbsp;  By Hu
       </a>
     </div>
   </div>
@@ -370,3 +394,5 @@ watch(loginDay, value => {
   }
 }
 </style>
+
+

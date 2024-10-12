@@ -1,276 +1,176 @@
-<script setup lang="ts">
-import { ref, markRaw } from "vue";
-import ReCol from "@/components/ReCol";
-import { useDark, randomGradient } from "./utils";
-import WelcomeTable from "./components/table/index.vue";
-import { ReNormalCountTo } from "@/components/ReCountTo";
-import { useRenderFlicker } from "@/components/ReFlicker";
-import { ChartBar, ChartLine, ChartRound } from "./components/charts";
-import Segmented, { type OptionsType } from "@/components/ReSegmented";
-import { chartData, barChartData, progressData, latestNewsData } from "./data";
-
+<!-- <script setup lang="ts">
 defineOptions({
   name: "Welcome"
 });
-
-const { isDark } = useDark();
-
-let curWeek = ref(1); // 0上周、1本周
-const optionsBasis: Array<OptionsType> = [
-  {
-    label: "上周"
-  },
-  {
-    label: "本周"
-  }
-];
 </script>
 
 <template>
-  <div>
-    <el-row :gutter="24" justify="space-around">
-      <re-col
-        v-for="(item, index) in chartData"
-        :key="index"
-        v-motion
-        class="mb-[18px]"
-        :value="6"
-        :md="12"
-        :sm="12"
-        :xs="24"
-        :initial="{
-          opacity: 0,
-          y: 100
-        }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 80 * (index + 1)
-          }
-        }"
-      >
-        <el-card class="line-card" shadow="never">
-          <div class="flex justify-between">
-            <span class="text-md font-medium">
-              {{ item.name }}
-            </span>
-            <div
-              class="w-8 h-8 flex justify-center items-center rounded-md"
-              :style="{
-                backgroundColor: isDark ? 'transparent' : item.bgColor
-              }"
-            >
-              <IconifyIconOffline
-                :icon="item.icon"
-                :color="item.color"
-                width="18"
-              />
-            </div>
-          </div>
-          <div class="flex justify-between items-start mt-3">
-            <div class="w-1/2">
-              <ReNormalCountTo
-                :duration="item.duration"
-                :fontSize="'1.6em'"
-                :startVal="100"
-                :endVal="item.value"
-              />
-              <p class="font-medium text-green-500">{{ item.percent }}</p>
-            </div>
-            <ChartLine
-              v-if="item.data.length > 1"
-              class="!w-1/2"
-              :color="item.color"
-              :data="item.data"
-            />
-            <ChartRound v-else class="!w-1/2" />
-          </div>
-        </el-card>
-      </re-col>
+  <h1>Pure-Admin-Thin（非国际化版本）</h1>
+</template> -->
 
-      <re-col
-        v-motion
-        class="mb-[18px]"
-        :value="18"
-        :xs="24"
-        :initial="{
-          opacity: 0,
-          y: 100
-        }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 400
-          }
-        }"
-      >
-        <el-card class="bar-card" shadow="never">
-          <div class="flex justify-between">
-            <span class="text-md font-medium">分析概览</span>
-            <Segmented v-model="curWeek" :options="optionsBasis" />
-          </div>
-          <div class="flex justify-between items-start mt-3">
-            <ChartBar
-              :requireData="barChartData[curWeek].requireData"
-              :questionData="barChartData[curWeek].questionData"
-            />
-          </div>
-        </el-card>
-      </re-col>
 
-      <re-col
-        v-motion
-        class="mb-[18px]"
-        :value="6"
-        :xs="24"
-        :initial="{
-          opacity: 0,
-          y: 100
-        }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 480
-          }
-        }"
-      >
-        <el-card shadow="never">
-          <div class="flex justify-between">
-            <span class="text-md font-medium">解决概率</span>
-          </div>
-          <div
-            v-for="(item, index) in progressData"
-            :key="index"
-            :class="[
-              'flex',
-              'justify-between',
-              'items-start',
-              index === 0 ? 'mt-8' : 'mt-[2.15rem]'
-            ]"
-          >
-            <el-progress
-              :text-inside="true"
-              :percentage="item.percentage"
-              :stroke-width="21"
-              :color="item.color"
-              striped
-              striped-flow
-              :duration="item.duration"
-            />
-            <span class="text-nowrap ml-2 text-text_color_regular text-sm">
-              {{ item.week }}
-            </span>
-          </div>
-        </el-card>
-      </re-col>
 
-      <re-col
-        v-motion
-        class="mb-[18px]"
-        :value="18"
-        :xs="24"
-        :initial="{
-          opacity: 0,
-          y: 100
-        }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 560
-          }
-        }"
-      >
-        <el-card shadow="never" class="h-[580px]">
-          <div class="flex justify-between">
-            <span class="text-md font-medium">数据统计</span>
-          </div>
-          <WelcomeTable class="mt-3" />
-        </el-card>
-      </re-col>
-
-      <re-col
-        v-motion
-        class="mb-[18px]"
-        :value="6"
-        :xs="24"
-        :initial="{
-          opacity: 0,
-          y: 100
-        }"
-        :enter="{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 640
-          }
-        }"
-      >
-        <el-card shadow="never">
-          <div class="flex justify-between">
-            <span class="text-md font-medium">最新动态</span>
-          </div>
-          <el-scrollbar max-height="504" class="mt-3">
-            <el-timeline>
-              <el-timeline-item
-                v-for="(item, index) in latestNewsData"
-                :key="index"
-                center
-                placement="top"
-                :icon="
-                  markRaw(
-                    useRenderFlicker({
-                      background: randomGradient({
-                        randomizeHue: true
-                      })
-                    })
-                  )
-                "
-                :timestamp="item.date"
-              >
-                <p class="text-text_color_regular text-sm">
-                  {{
-                    `新增 ${item.requiredNumber} 条问题，${item.resolveNumber} 条已解决`
-                  }}
-                </p>
-              </el-timeline-item>
-            </el-timeline>
-          </el-scrollbar>
-        </el-card>
-      </re-col>
-    </el-row>
+<template>
+  <div id="box">
+    <div class="left">
+      <el-button type="primary" @click="all">获取info表的全部数据</el-button>
+      <h2>-----------------------------------</h2>
+      <el-input v-model="id" placeholder="请输入id" class="input"></el-input>
+      <el-button type="danger" @click="del">删除</el-button>
+      <el-button type="primary" @click="get">查询</el-button>
+      <h2>-----------------------------------</h2>
+      <el-input v-model="id" placeholder="请输入id" class="input"></el-input>
+      <el-input v-model="name" placeholder="请输入姓名" class="input"></el-input>
+      <el-input v-model="password" placeholder="请输入密码" class="input"></el-input>
+      <el-input v-model="studentid" placeholder="学号" class="input"></el-input>
+      <el-input v-model="major" placeholder="请输入专业班级" class="input"></el-input>
+      <el-input v-model="tel" placeholder="请输入电话" class="input"></el-input>
+      <el-input v-model="qq" placeholder="请输入qq" class="input"></el-input>
+      <el-button type="primary" @click="add">添加</el-button>
+      <el-button type="primary" @click="update">修改</el-button>
+    </div>
+    <div class="right">
+      <el-table :data="info" style="width: 100%">
+        <el-table-column prop="id" label="ID"></el-table-column>
+        <el-table-column prop="name" label="姓名"></el-table-column>
+        <el-table-column prop="password" label="密码"></el-table-column>
+        <el-table-column prop="studentid" label="学号"></el-table-column>
+        <el-table-column prop="major" label="专业班级"></el-table-column>
+        <el-table-column prop="tel" label="联系电话"></el-table-column>
+        <el-table-column prop="qq" label="qq"></el-table-column>
+      </el-table>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-:deep(.el-card) {
-  --el-card-border-color: none;
 
-  /* 解决概率进度条宽度 */
-  .el-progress--line {
-    width: 85%;
-  }
 
-  /* 解决概率进度条字体大小 */
-  .el-progress-bar__innerText {
-    font-size: 15px;
-  }
-
-  /* 隐藏 el-scrollbar 滚动条 */
-  .el-scrollbar__bar {
-    display: none;
-  }
-
-  /* el-timeline 每一项上下、左右边距 */
-  .el-timeline-item {
-    margin: 0 6px;
-  }
+<style scoped>
+#box {
+  display: flex;
 }
-
-.main-content {
-  margin: 20px 20px 0 !important;
+.left {
+  flex: 1;
+  padding: 20px;
+}
+.right {
+  flex: 2;
+  padding: 20px;
+}
+.input {
+  margin-bottom: 10px;
+  width: 100%;
 }
 </style>
+
+<script>
+import axios from "axios"
+export default {
+  data () {
+    return {
+      id: '',
+      name: '',
+      password: '',
+      studentid: '',
+      major: '',
+      tel: '',
+      qq: '',
+      info: []
+    };
+  },
+  methods: {
+    all() {    //查找info表全部数据
+      axios.get('http://127.0.0.1:666/list/all').then(res=>{
+          // console.log(res.data);
+          this.info = res.data
+      }).catch(err=>{
+          console.log("获取数据失败" + err);
+      })
+    },
+    del() {    //删除操作
+      axios.get('http://127.0.0.1:666/list/del',{
+        params: {
+          id: this.id
+        }
+      }).then(res=>{
+          // console.log(res.data);
+          if(res.data.status == 200 || res.data.status == 202) {
+          	this.all()
+          }else{
+          	this.$message({
+	          message: '删除失败',
+	          type: 'error'
+	        });
+          }
+      }).catch(err=>{
+          console.log("操作失败" + err);
+      })
+    },
+    get() {    //查询操作
+      axios.get('http://127.0.0.1:666/list/get',{
+        params: {
+          id: this.id
+        }
+      }).then(res=>{
+          // console.log(res.data);
+          this.info = res.data
+      }).catch(err=>{
+          console.log("操作失败" + err);
+      })
+    },
+    add() {   //添加操作
+      axios.get('http://127.0.0.1:666/list/add',{
+        params: {
+            id: this.id,
+            name: this.name,
+            password: this.password,
+            studentid: this.studentid,
+            major: this.major,
+            tel: this.tel,
+            qq: this.qq
+        }
+      }).then(res=>{
+          // console.log(res.data);
+          if(res.data.status == 200) {
+          	this.all()
+          }else{
+          	this.$message({
+	          message: '添加失败',
+	          type: 'error'
+	        });
+          }
+      }).catch(err=>{
+          console.log("操作失败" + err);
+      })
+    },
+    update() {     //修改操作
+      axios.get('http://127.0.0.1:666/list/update',{
+        params: {
+            id: this.id,
+            name: this.name,
+            password: this.password,
+            studentid: this.studentid,
+            major: this.major,
+            tel: this.tel,
+            qq: this.qq
+        }
+      }).then(res=>{
+          // console.log(res.data);
+          if(res.data.status == 200) {
+          	this.all()
+          }else{
+          	this.$message({
+	          message: '修改失败',
+	          type: 'error'
+	        });
+          }
+      }).catch(err=>{
+          console.log("操作失败" + err);
+      })
+    }
+  }
+}
+</script>
+
+
+

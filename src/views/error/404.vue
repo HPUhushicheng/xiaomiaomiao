@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { ref } from 'vue';
 import noExist from "@/assets/status/404.svg?component";
 
 defineOptions({
@@ -67,4 +68,6 @@ const router = useRouter();
       </el-button>
     </div>
   </div>
-</template>
+</template> 
+
+

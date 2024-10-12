@@ -9,17 +9,25 @@ import { useVerifyCode } from "../utils/verifyCode";
 import { $t, transformI18n } from "@/plugins/i18n";
 import { useUserStoreHook } from "@/store/modules/user";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
+import Check from "@iconify-icons/ep/check";
 import Lock from "@iconify-icons/ri/lock-fill";
 import Iphone from "@iconify-icons/ep/iphone";
 import User from "@iconify-icons/ri/user-3-fill";
+import QQ from "@iconify-icons/mingcute/qq-fill";
+import major from "@iconify-icons/ri/bank-line";
+import studentid from "@iconify-icons/ri/body-scan-fill";
+import axios from "axios"; // 添加 axios
 
+// 此处拿studentid 当作id来带入注册接口，
 const { t } = useI18n();
 const checked = ref(false);
 const loading = ref(false);
 const ruleForm = reactive({
-  username: "",
-  phone: "",
-  verifyCode: "",
+  name: "",
+  major: "",
+  studentid: "",
+  tel: "",
+  qq: "",
   password: "",
   repeatPassword: ""
 });
@@ -45,16 +53,39 @@ const repeatPasswordRule = [
 const onUpdate = async (formEl: FormInstance | undefined) => {
   loading.value = true;
   if (!formEl) return;
-  await formEl.validate(valid => {
+  await formEl.validate(async (valid) => {
     if (valid) {
       if (checked.value) {
-        // 模拟请求，需根据实际开发进行修改
-        setTimeout(() => {
-          message(transformI18n($t("login.pureRegisterSuccess")), {
-            type: "success"
+        // 获取表单数据
+        const {
+          studentid,
+          name,
+          password,
+          major,
+          tel,
+          qq
+        } = ruleForm;
+
+        // 构建请求 URL
+        const url = `http://127.0.0.1:666/list/add?id=${studentid}&name=${name}&password=${password}&studentid=${studentid}&major=${major}&tel=${tel}&qq=${qq}`;
+
+        try {
+          // 发送 GET 请求
+          const response = await axios.get(url);
+          if (response.status === 200) {
+            // 模拟请求成功的反馈
+            message(transformI18n($t("login.pureRegisterSuccess")), {
+              type: "success"
+            });
+          }
+        } catch (error) {
+          // 处理请求错误
+          message(transformI18n($t("login.pureRegisterFailure")), {
+            type: "error"
           });
+        } finally {
           loading.value = false;
-        }, 2000);
+        }
       } else {
         loading.value = false;
         message(transformI18n($t("login.pureTickPrivacy")), {
@@ -89,10 +120,10 @@ function onBack() {
             trigger: 'blur'
           }
         ]"
-        prop="username"
+        prop="name"
       >
         <el-input
-          v-model="ruleForm.username"
+          v-model="ruleForm.name"
           clearable
           :placeholder="t('login.pureUsername')"
           :prefix-icon="useRenderIcon(User)"
@@ -100,38 +131,62 @@ function onBack() {
       </el-form-item>
     </Motion>
 
-    <Motion :delay="100">
-      <el-form-item prop="phone">
+    <Motion>
+      <el-form-item
+        :rules="[
+          {
+            required: true,
+            message: transformI18n($t('login.pureMajorReg')),
+            trigger: 'blur'
+          }
+        ]"
+        prop="major"
+      >
         <el-input
-          v-model="ruleForm.phone"
+          v-model="ruleForm.major"
           clearable
-          :placeholder="t('login.purePhone')"
-          :prefix-icon="useRenderIcon(Iphone)"
+          :placeholder="t('login.pureMajorReg')"
+          :prefix-icon="useRenderIcon(major)"
         />
       </el-form-item>
     </Motion>
 
-    <Motion :delay="150">
-      <el-form-item prop="verifyCode">
-        <div class="w-full flex justify-between">
-          <el-input
-            v-model="ruleForm.verifyCode"
-            clearable
-            :placeholder="t('login.pureSmsVerifyCode')"
-            :prefix-icon="useRenderIcon('ri:shield-keyhole-line')"
-          />
-          <el-button
-            :disabled="isDisabled"
-            class="ml-2"
-            @click="useVerifyCode().start(ruleFormRef, 'phone')"
-          >
-            {{
-              text.length > 0
-                ? text + t("login.pureInfo")
-                : t("login.pureGetVerifyCode")
-            }}
-          </el-button>
-        </div>
+    <Motion>
+      <el-form-item
+        :rules="[
+          {
+            required: true,
+            message: transformI18n($t('login.pureStudentidReg')),
+            trigger: 'blur'
+          }
+        ]"
+        prop="studentid"
+      >
+        <el-input
+          v-model="ruleForm.studentid"
+          clearable
+          :placeholder="t('login.pureStudentid')"
+          :prefix-icon="useRenderIcon(studentid)"
+        />
+      </el-form-item>
+    </Motion>
+
+    <Motion :delay="100">
+      <el-form-item 
+      :rules="[
+          {
+            required: true,
+            message: transformI18n($t('login.purePhoneReg')),
+            trigger: 'blur'
+          }
+        ]"
+      prop="tel">
+        <el-input
+          v-model="ruleForm.tel"
+          clearable
+          :placeholder="t('login.purePhone')"
+          :prefix-icon="useRenderIcon(Iphone)"
+        />
       </el-form-item>
     </Motion>
 
@@ -193,3 +248,5 @@ function onBack() {
     </Motion>
   </el-form>
 </template>
+
+

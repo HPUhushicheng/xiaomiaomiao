@@ -63,6 +63,11 @@ panel:
   pureMultiTagsCache: 页签持久化
 menus:
   pureHome: 首页
+  pureCustomCountdown: 倒计时
+  pureWork: 工作台
+  pureWallpaper: 图片
+  pureTianqi: 天气
+  pureSite: 座位
   pureLogin: 登录
   pureEmpty: 无Layout页
   pureTable: 表格
@@ -125,8 +130,6 @@ menus:
   purePermission: 权限管理
   purePermissionPage: 页面权限
   purePermissionButton: 按钮权限
-  purePermissionButtonRouter: 路由返回按钮权限
-  purePermissionButtonLogin: 登录接口返回按钮权限
   pureTabs: 标签页操作
   pureGuide: 引导页
   pureAble: 功能
@@ -193,9 +196,12 @@ status:
   pureNoNotify: 暂无通知
   pureNoTodo: 暂无待办
 login:
-  pureUsername: 账号
+  pureUsername: 姓名
   purePassword: 密码
   pureVerifyCode: 验证码
+  pureMajor: 专业班级
+  pureQQ: QQ
+  pureStudentid: 学号
   pureRemember: 天内免登录
   pureRememberInfo: 勾选并登录后，规定天数内无需输入用户名和密码会自动登入系统
   pureSure: 确认密码
@@ -223,7 +229,7 @@ login:
   purePrivacyPolicy: 《隐私政策》
   pureGetVerifyCode: 获取验证码
   pureInfo: 秒后重新获取
-  pureUsernameReg: 请输入账号
+  pureUsernameReg: 请输入姓名
   purePassWordReg: 请输入密码
   pureVerifyCodeReg: 请输入验证码
   pureVerifyCodeCorrectReg: 请输入正确的验证码
@@ -234,3 +240,6 @@ login:
   purePassWordSureReg: 请输入确认密码
   purePassWordDifferentReg: 两次密码不一致!
   purePassWordUpdateReg: 修改密码成功
+  pureMajorReg: 请输入专业班级
+  pureQQReg: 请输入QQ
+  pureStudentidReg: 请输入学号

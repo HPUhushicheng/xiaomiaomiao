@@ -1,5 +1,4 @@
 import { $t } from "@/plugins/i18n";
-import { error } from "@/router/enums";
 
 export default {
   path: "/error",
@@ -8,7 +7,7 @@ export default {
     icon: "ri:information-line",
     // showLink: false,
     title: $t("menus.pureAbnormal"),
-    rank: error
+    rank: 9
   },
   children: [
     {
@@ -33,6 +32,14 @@ export default {
       component: () => import("@/views/error/500.vue"),
       meta: {
         title: $t("menus.pureFive")
+      }
+    },
+    {
+      path: "/error/600",
+      name: "600",
+      component: () => import("@/views/error/600.vue"),
+      meta: {
+        title: $t("menus.pureFourZeroFour")
       }
     }
   ]
