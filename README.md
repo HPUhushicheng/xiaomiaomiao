@@ -31,6 +31,8 @@
 
 文档介绍: [https://pure-admin.github.io/](https://pure-admin.github.io/)
 
+软件下载官网：[https://xiaomiaomiao.wegic.app/](https://xiaomiaomiao.wegic.app/)
+
 
 ## 参与开发？
 
