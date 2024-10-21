@@ -77,7 +77,7 @@ export default {
 
 
 
-<template>
+<!-- <template>
   <div class="message-wall">
     <div class="controls">
       <el-button type="primary" @click="addMessage">添加</el-button>
@@ -202,5 +202,108 @@ export default {
 .reply-input {
   margin-top: 10px;
   width: 100%;
+}
+</style> -->
+
+
+<template>
+  <div class="路径">
+    <div class="div">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ed17f4225be46c1b89ad5aea1fdc277ce51a03bde743839cf5f1f3c7a66e852?placeholderIfAbsent=true&apiKey=8263eee779fe46cfa2cc795d40d4498b"
+        class="img"
+      />
+      <div class="昵称">胡事成</div>
+    </div>
+    <div class="div-2">
+      <div class="div-3">
+        <div>
+          自分自身を信じてみるだけでいい。 <br />きっと、生きる道が見えてくる
+        </div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/56953a033ecfe30e1df7eaeb8e98ea868c4854ccd527017649e71a327a22d74f?placeholderIfAbsent=true&apiKey=8263eee779fe46cfa2cc795d40d4498b"
+          class="img-2"
+        />
+      </div>
+      <div class="delete图标"></div>
+    </div>
+  </div>
+</template>
+
+
+
+<style scoped>
+.路径 {
+  border-radius: 30px;
+  background-color: rgba(242, 225, 225, 1);
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  align-items: start;
+  padding: 6px 32px 17px 18px;
+}
+@media (max-width: 991px) {
+  .路径 {
+    padding-right: 20px;
+  }
+}
+.div {
+  display: flex;
+  gap: 15px;
+  white-space: nowrap;
+  line-height: 1;
+}
+@media (max-width: 991px) {
+  .div {
+    white-space: initial;
+  }
+}
+.img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 30px;
+}
+.昵称 {
+  margin: auto 0;
+}
+.div-2 {
+  display: flex;
+  gap: 1px;
+  line-height: 18px;
+  margin: 23px 0 0 14px;
+}
+@media (max-width: 991px) {
+  .div-2 {
+    margin-left: 10px;
+  }
+}
+.div-3 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+}
+.img-2 {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 21px;
+  margin-top: 9px;
+}
+.delete图标 {
+  align-self: end;
+  display: flex;
+  margin-top: 62px;
+  width: 21px;
+  height: 21px;
+}
+@media (max-width: 991px) {
+  .delete图标 {
+    margin-top: 40px;
+  }
 }
 </style>

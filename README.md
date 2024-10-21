@@ -9,19 +9,19 @@
 <a href="https://site.hpuedd.top"><img alt="博客" src="https://img.shields.io/badge/老博客-site.hpuedd.top-purple?link=https://site.hpuedd.top" ></a>
 <a href="https://pan.hpuedd.top"><img alt="网盘" src="https://img.shields.io/badge/网盘-pan.hpuedd.top-green?link=https://pan.hpuedd.top" ></a>
 
-
- 
 ![GitHub license](https://img.shields.io/github/license/pure-admin/vue-pure-admin?style=flat)
 ![GitHub stars](https://img.shields.io/github/stars/HPUhushicheng/xiaomiaomiao?color=fa6470&style=flat)
 ![GitHub forks](https://img.shields.io/github/forks/HPUhushicheng/xiaomiaomiao?style=flat)
-![github ss](https://img.shields.io/badge/电器开发部-小喵喵-da282a) 
---- 
+![github ss](https://img.shields.io/badge/电器开发部-小喵喵-da282a)
+
+---
 
 </div>
 
 **中文** | [English](./README.en-US.md)
 
 ## 简介
+
 `小喵喵`后台管理网站使用`vue-pure-admin`前端模板 + `nodejs` + `mysql`开发, 桌面端软件使用`electron`技术开发,计划暂时支持`windows10,windows11`版本以及`macOS`部分系列,`linux`不加入计划中;
 
 `vue-pure-admin` 是一款开源免费且开箱即用的中后台管理系统模版。完全采用 `ECMAScript` 模块（`ESM`）规范来编写和组织代码，使用了最新的 `Vue3`、
@@ -31,8 +31,9 @@
 
 文档介绍: [https://pure-admin.github.io/](https://pure-admin.github.io/)
 
-软件下载官网：[https://xiaomiaomiao.wegic.app/](https://xiaomiaomiao.wegic.app/)
+前端ui组件：[UIverse](uiverse.io)
 
+前端ui编写助手：[blot](https://bolt.new/)
 
 ## 参与开发？
 
@@ -42,6 +43,7 @@
 - 您也可以从项目的discussions里面了解相关的开发内容。
 - 如果你愿意加入我们，你可以查看discussions，并发表讨论、想法.
 - 你也可以带着你的创意与想法，和社区的小伙伴一起讨论，为`小喵喵`创造一些新的功能。
+
 ## 研发理念
 
 稳定中求创新，技术中见未来
@@ -214,7 +216,6 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 |         [o-cc](https://github.com/o-cc)         |     [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=o-cc)     |
 | [yj-liuzepeng](https://github.com/yj-liuzepeng) | [代码](https://github.com/pure-admin/vue-pure-admin/commits?author=yj-liuzepeng) |
 
-
 ## `Git` 贡献提交规范
 
 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
@@ -247,7 +248,6 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 
 [HPUhushicheng](https://github.com/HPUhushicheng)
 
-
 ## `Star`
 
 非常感谢留下星星的好心人，感谢您的支持 :heart:
@@ -259,4 +259,3 @@ docker run -dp 8080:80  --name pure-admin vue-pure-admin
 瞧，那些 `小哥哥` 、`小姐姐` 认真 `学习` 的样子真滴是 `哎呦不错哦` :heart:
 
 [![Forkers repo roster for @pure-admin/vue-pure-admin](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=HPUhushicheng&repo=xiaomiaomiao)](https://github.com/HPUhushicheng/xiaomiaomiao/network/members)
-
